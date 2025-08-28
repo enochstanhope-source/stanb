@@ -10,6 +10,8 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+        margin-right: 100px;
+        margin-left: 100px;
     }
     .signup-container {
         position: absolute;
@@ -67,20 +69,31 @@
         overflow-y: auto;
     }
     }
+
     .signup-container {
-        position: absolute;
-        top: 120px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80vw;
-        max-width: 370px;
-        min-width: unset;
-        margin: 0;
-        padding: 32px 8px 24px 8px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            position: relative;
+            margin: 40px auto 0 auto;
+            width: 100%;
+            max-width: 390px; /* iPhone 14 width */
+            min-width: 0;
+            padding: 32px 16px 24px 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(20, 40, 80, 0.3);
+            border-radius: 24px;
+            box-shadow: 0 0 24px 4px rgba(0, 180, 255, 0.2);
+            z-index: 5;
+    }
+
+    @media (max-width: 430px) {
+        .signup-container {
+            max-width: 98vw;
+            padding-left: 6vw;
+            padding-right: 6vw;
+        }
     }
 
 .signup-form {
