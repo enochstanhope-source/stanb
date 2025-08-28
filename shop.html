@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Programs - FPNO Skills Hub</title>
+
+    <!-- Resource hints for critical assets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/fav.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    
+    <script src="scripts/shop.js" defer></script>    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.zoom = "100%";
+            // Ensure zoom stays at 100% even if user tries to change it
+            window.addEventListener('resize', function() {
+                document.body.style.zoom = "100%";
+            });
+            // Prevent zoom on mobile devices
+            document.addEventListener('gesturestart', function(e) {
+                e.preventDefault();
+            });
+            document.addEventListener('touchmove', function(e) {
+                if (e.scale !== 1) { e.preventDefault(); }
+            }, { passive: false });
+        });
+    </script>
+    <!-- Lazy loading for images -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img').forEach(img => img.setAttribute('loading', 'lazy'));
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/polybay.png" alt="FPNO Skills Hub Logo" width="40" height="40" />
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#programs" class="active">Programs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            <a href="#" class="account-icon"><i class="fas fa-user"></i></a>
+            <a href="#" class="favorites-icon"><i class="fas fa-heart"></i></a>
+            <a href="#" class="enrolled-courses"><i class="fas fa-graduation-cap"></i> <span>0</span></a>
+        </div>
+    </header>
+
+    <main class="shop-container">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="shopSearch" placeholder="Search courses... Web Development, Digital Marketing, Photography">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <!-- Program Categories -->
+        <div class="collections-tabs">
+            <div class="tab active" data-collection="all">
+                <span><i class="fas fa-th-large"></i> All Programs</span>
+            </div>
+            <div class="tab" data-collection="certificate">
+                <span><i class="fas fa-certificate"></i> Certificate</span>
+            </div>
+            <div class="tab" data-collection="diploma">
+                <span><i class="fas fa-graduation-cap"></i> Diploma</span>
+            </div>
+            <div class="tab" data-collection="short">
+                <span><i class="fas fa-clock"></i> Short Courses</span>
+            </div>
+        </div>
+
+        <div class="brand-filters">
+            <h2>Categories</h2>
+            <div class="brand-buttons">
+                <button class="brand-btn active" data-category="all"><i class="fas fa-th"></i> All Categories</button>
+                <button class="brand-btn" data-category="tech"><i class="fas fa-laptop-code"></i> Technology</button>
+                <button class="brand-btn" data-category="design"><i class="fas fa-paint-brush"></i> Design</button>
+                <button class="brand-btn" data-category="business"><i class="fas fa-chart-line"></i> Business</button>
+                <button class="brand-btn" data-category="vocational"><i class="fas fa-tools"></i> Vocational</button>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Web Development Course -->
+            <div class="product-card" data-category="tech" data-collection="certificate">
+                <img src="images/web.jpg" alt="Web Development Course">
+                <div class="product-info">
+                    <div class="course-badge"><i class="fas fa-code"></i> Technology</div>
+                    <h3>Full Stack Web Development</h3>
+                    <div class="course-details">
+                        <span><i class="fas fa-clock"></i> 6 Months</span>
+                        <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                    </div>
+                    <div class="rating">
+                        <span class="stars">4.8 ⭐⭐⭐⭐⭐</span>
+                        <span class="reviews">324 Students</span>
+                    </div>
+                    <p class="price">₦120,000 <span class="installment">or 3 installments</span></p>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Digital Marketing Course -->
+            <div class="product-card" data-category="business" data-collection="certificate">
+                <img src="images/digital.jpg" alt="Digital Marketing Course">
+                <div class="product-info">
+                    <div class="course-badge"><i class="fas fa-bullhorn"></i> Business</div>
+                    <h3>Digital Marketing Mastery</h3>
+                    <div class="course-details">
+                        <span><i class="fas fa-clock"></i> 3 Months</span>
+                        <span><i class="fas fa-signal"></i> All Levels</span>
+                    </div>
+                    <div class="rating">
+                        <span class="stars">4.6 ⭐⭐⭐⭐</span>
+                        <span class="reviews">256 Students</span>
+                    </div>
+                    <p class="price">₦75,000 <span class="installment">or 2 installments</span></p>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Fashion Design Course -->
+            <div class="product-card" data-category="vocational" data-collection="diploma">
+                <img src="images/me7.jpg" alt="Fashion Design Course">
+                <div class="product-info">
+                    <div class="course-badge"><i class="fas fa-cut"></i> Vocational</div>
+                    <h3>Professional Fashion Design</h3>
+                    <div class="course-details">
+                        <span><i class="fas fa-clock"></i> 12 Months</span>
+                        <span><i class="fas fa-signal"></i> All Levels</span>
+                    </div>
+                    <div class="rating">
+                        <span class="stars">4.7 ⭐⭐⭐⭐</span>
+                        <span class="reviews">198 Students</span>
+                    </div>
+                    <p class="price">₦150,000 <span class="installment">or 4 installments</span></p>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Photography Course -->
+            <div class="product-card" data-category="design" data-collection="short">
+                <img src="images/aa1.jpg" alt="Photography Course">
+                <div class="product-info">
+                    <div class="course-badge"><i class="fas fa-camera"></i> Creative</div>
+                    <h3>Digital Photography</h3>
+                    <div class="course-details">
+                        <span><i class="fas fa-clock"></i> 2 Months</span>
+                        <span><i class="fas fa-signal"></i> Beginner</span>
+                    </div>
+                    <div class="rating">
+                        <span class="stars">4.5 ⭐⭐⭐⭐</span>
+                        <span class="reviews">167 Students</span>
+                    </div>
+                    <p class="price">₦45,000 <span class="installment">or 2 installments</span></p>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About FPNO Skills Hub</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-history"></i> Our Story</a></li>
+                    <li><a href="about.html#team"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="about.html#careers"><i class="fas fa-briefcase"></i> Careers</a></li>
+                    <li><a href="about.html#press"><i class="fas fa-newspaper"></i> Press</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Industry Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Resources</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-book"></i> E-Library</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Course Materials</a></li>
+                    <li><a href="#"><i class="fas fa-play-circle"></i> Video Tutorials</a></li>
+                    <li><a href="#"><i class="fas fa-blog"></i> Skills Blog</a></li>
+                    <li><a href="#"><i class="fas fa-star"></i> Success Stories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Training Programs</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-certificate"></i> Certificate Programs</a></li>
+                    <li><a href="#"><i class="fas fa-graduation-cap"></i> Diploma Programs</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Short Courses</a></li>
+                    <li><a href="#"><i class="fas fa-tools"></i> Vocational Training</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i> Entrepreneurship</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Get Updates on New Courses</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required />
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="payment-methods">
+                <img src="images/visa.jpg" alt="Visa" />
+                <img src="images/mastercard.jpg" alt="Mastercard" />
+                <img src="images/verve.jpg" alt="Verve" />
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 FPNO Skill Acquisition Hub. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                    <a href="#"><i class="fas fa-gavel"></i> Terms of Service</a>
+                    <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - g-One STORES</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preload" href="styles/cart.css" as="style" />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <script src="https://js.paystack.co/v1/inline.js" async></script>
+    <script src="scripts/cart.js" defer></script>
+    <script>
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () =>
+          requestAnimationFrame(() => (document.body.style.zoom = "100%"))
+        );
+      } else {
+        requestAnimationFrame(() => (document.body.style.zoom = "100%"));
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/polybay.png" alt="G-ONE Logo" width="40" height="40" />
+          </a>
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="pages.html">Pages</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="#" class="search-icon">🔍</a>
+        <a href="#" class="account-icon">👤</a>
+        <a href="#" class="wishlist-icon">❤</a>
+        <a href="#" class="cart-icon">🛒 <span>0</span></a>
+      </div>
+    </header>
+
+    <main class="cart-container">
+      <div class="cart-header-section">
+        <h1>Shopping Cart</h1>
+        <a href="shop.html" class="back-to-shop">Continue Shopping</a>
+      </div>
+
+      <div class="progress-bar">
+        <p>Get FREE Shipping for purchases above ₦80,000</p>
+        <div class="progress"></div>
+      </div>
+
+      <div class="cart-content">
+        <div class="cart-items">
+          <div class="cart-header">
+            <span>Product</span>
+            <span>Quantity</span>
+            <span>Price</span>
+            <span>Subtotal</span>
+          </div>
+          <!-- Cart items will be dynamically populated by JavaScript -->
+          <div class="cart-item" data-id="1">
+            <div class="product-info">
+              <img src="images/a1.jpg" alt="Balenciaga Triple S" />
+              <div class="product-details">
+                <h4>Balenciaga Triple S</h4>
+                <button class="remove-btn" data-id="1">Remove</button>
+              </div>
+            </div>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">−</button>
+              <span class="quantity-value">1</span>
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <div class="price">₦95,000</div>
+            <div class="subtotal">₦95,000</div>
+          </div>
+
+          <div class="cart-item" data-id="2">
+            <div class="product-info">
+              <img src="images/a2.jpg" alt="Puma RS-X" />
+              <div class="product-details">
+                <h4>Puma RS-X</h4>
+                <button class="remove-btn" data-id="2">Remove</button>
+              </div>
+            </div>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">−</button>
+              <span class="quantity-value">1</span>
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <div class="price">₦28,000</div>
+            <div class="subtotal">₦28,000</div>
+          </div>
+
+          <div class="cart-item" data-id="3">
+            <div class="product-info">
+              <img src="images/a3.jpg" alt="Nike Air Max" />
+              <div class="product-details">
+                <h4>Nike Air Max</h4>
+                <button class="remove-btn" data-id="3">Remove</button>
+              </div>
+            </div>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">−</button>
+              <span class="quantity-value">1</span>
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <div class="price">₦35,000</div>
+            <div class="subtotal">₦35,000</div>
+          </div>
+
+          <div class="cart-item" data-id="4">
+            <div class="product-info">
+              <img src="images/a4.jpg" alt="New Balance 574" />
+              <div class="product-details">
+                <h4>New Balance 574</h4>
+                <button class="remove-btn" data-id="4">Remove</button>
+              </div>
+            </div>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">−</button>
+              <span class="quantity-value">1</span>
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <div class="price">₦45,000</div>
+            <div class="subtotal">₦45,000</div>
+          </div>
+
+          <!-- Empty cart message (will be shown when cart is empty) -->
+          <div class="empty-cart-message" style="display: none">
+            <div class="empty-cart-icon">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p>Browse our products and find something you like</p>
+            <a href="shop.html" class="start-shopping-btn">Start Shopping</a>
+          </div>
+
+          <button class="clear-all-btn">Clear All Items</button>
+        </div>
+
+        <div class="cart-summary">
+          <div class="coupon-section">
+            <h3>Have a coupon?</h3>
+            <p>Add your code for an instant cart discount</p>
+            <div class="coupon-input">
+              <input type="text" placeholder="Enter coupon code" />
+              <button>Apply</button>
+            </div>
+          </div>
+
+          <div class="summary-details">
+            <h3>Cart Summary</h3>
+            <div class="subtotal-row">
+              <span>Subtotal:</span>
+              <span>₦0</span>
+            </div>
+            <div class="shipping-row">
+              <span>Shipping:</span>
+              <span>₦0</span>
+              <div class="shipping-note">
+                Free shipping on orders over ₦80,000
+              </div>
+            </div>
+            <div class="total-row">
+              <span>Total:</span>
+              <span>₦0</span>
+            </div>
+
+            <div class="payment-section">
+              <h3>Payment Methods</h3>
+              <div class="payment-tabs">
+                <button class="payment-tab active" data-tab="bank-transfer">
+                  Bank Transfer
+                </button>
+                <button class="payment-tab" data-tab="card-payment">
+                  Card Payment
+                </button>
+              </div>
+
+              <div class="payment-content" id="bank-transfer">
+                <div class="bank-details">
+                  <div class="account-info">
+                    <h4>Bank Details</h4>
+                    <p>Bank Name: <strong>Opay</strong></p>
+                    <p>
+                      Account Number:
+                      <span id="account-number">9162919586</span>
+                    </p>
+                    <p>Account Name: <strong>g-One Stores</strong></p>
+                    <button class="copy-btn" onclick="copyAccountNumber()">
+                      Copy Account Number
+                    </button>
+                  </div>
+                  <p class="transfer-note">
+                    Please upload your payment proof after making the transfer
+                  </p>
+                  <input type="file" id="payment-proof" accept="image/*" />
+                  <button class="submit-transfer-btn">
+                    Submit Payment Proof
+                  </button>
+                </div>
+              </div>
+
+              <div class="payment-content hidden" id="card-payment">
+                <div class="card-payment-info">
+                  <p>Pay securely using your credit/debit card</p>
+                  <button id="pay-with-card" class="pay-btn">Pay Now</button>
+                  <div class="supported-cards">
+                    <img
+                      src="images/visa.jpg"
+                      alt="Visa"
+                      width="50"
+                      height="30"
+                    />
+                    <img
+                      src="images/mastercard.jpg"
+                      alt="Mastercard"
+                      width="50"
+                      height="30"
+                    />
+                    <img
+                      src="images/verve.jpg"
+                      alt="Verve"
+                      width="50"
+                      height="30"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About G-ONE</h3>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Store Locations</a></li>
+            <li><a href="#">Corporate News</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Men's Collection</a></li>
+            <li><a href="#">Women's Collection</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="newsletter">
+            <h4>Subscribe to Our Newsletter</h4>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <img src="images/visa.jpg" alt="Visa" />
+          <img src="images/mastercard.jpg" alt="Mastercard" />
+          <img src="images/verve.jpg" alt="Verve" />
+        </div>
+        <div class="footer-info">
+          <p>&copy; 2025 G-ONE. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

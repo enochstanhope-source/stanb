@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G-ONE- Summer Collections 2025</title>
+    <meta
+      name="description"
+      content="G-ONE Summer Collections 2025 - Premium Footwear Collection"
+    />
+
+    <!-- Resource hints for critical assets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <link rel="preload" href="images/power.mp4" as="video" type="video/mp4" />
+    <link rel="preload" href="images/shoeee.jpg" as="image" type="image/jpeg" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/fav.ico" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- Optimized font loading -->
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hiA.woff2"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Font Awesome with optimized loading -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Add fallback for users with JavaScript disabled -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- Module scripts loaded with type="module" for better performance -->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
+
+    <!-- Image lazy loading setup -->
+    <script>
+      if ("loading" in HTMLImageElement.prototype) {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelectorAll("img[data-src]").forEach((img) => {
+            img.setAttribute("loading", "lazy");
+            img.src = img.dataset.src;
+          });
+        });
+      } else {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
+        document.body.appendChild(script);
+      }
+    </script>
+  </head>  <body>
+    <!-- Page Loader -->
+     <pre>
+    <div class="loader-wrapper">
+      <div class="loader-container">
+        <div class="loader"></div>
+        <div class="loader-text">̲FPNO Skill Acquisition Hub...</div>
+      </div>
+    </div>
+    </pre>
+    
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/polybay.png" alt="G-ONE Logo" width="40logo" height="40" />
+          </a>
+        </div>
+        
+        <ul class="nav-links">
+          <li class="nav-dropdown">
+            <a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html"><i class="fas fa-history"></i> Our Story</a>
+              </li>
+              <li>
+                <a href="about.html#team"><i class="fas fa-users"></i> Our Team</a>
+              </li>
+              <li>
+                <a href="about.html#careers"><i class="fas fa-briefcase"></i> Careers</a>
+              </li>
+              <li>
+                <a href="about.html#press"><i class="fas fa-newspaper"></i> Press</a>
+              </li>
+            </ul>
+          </li>
+
+         
+
+          <li class="nav-dropdown">
+            <a href="#product">Courses <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="product.html"
+                  ><i class="fas fa-certificate"></i> Certificate Programs</a
+                >
+              </li>
+              <li>
+                <a href="product.html#bestsellers"
+                  ><i class="fas fa-graduation-cap"></i> Diploma Programs</a
+                >
+              </li>
+              <li>
+                <a href="product.html#sale"><i class="fas fa-clock"></i> Short Courses</a>
+              </li>
+              <li>
+                <a href="product.html#collections"><i class="fas fa-tools"></i> Vocational Training</a>
+              </li>
+              <li>
+                <a href="product.html#sale"><i class="fas fa-lightbulb"></i> Entrepreneurship</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-dropdown">
+            <a href="#testimonial"
+              >Programs<i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="testimonial.html"
+                  ><i class="fas fa-briefcase"></i> Internship Programs</a
+                >
+              </li>
+              <li>
+                <a href="testimonial.html"><i class="fas fa-cogs"></i> Workings</a>
+              </li>
+              <li>
+                <a href="testimonial.html"
+                  ><i class="fas fa-chalkboard-teacher"></i> Mentorship</a
+                >
+              </li>
+              <li>
+                <a href="testimonial.html"><i class="fas fa-building"></i> Industry Partners</a>
+              </li>
+            </ul>
+          </li>
+
+         
+        </ul>
+
+        
+        <div class="nav-actions">
+          <div class="account-dropdown">
+            <div class="guest-account" id="guestAccount">
+              <a href="#" class="account-link">
+                <i class="fas fa-user-circle"></i>
+                <span>Account</span>
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu" id="guestDropdown">
+                <li>
+                  <a href="login.html"
+                    ><i class="fas fa-sign-in-alt"></i> Login</a
+                  >
+                </li>
+                <li>
+                  <a href="signup.html"
+                    ><i class="fas fa-user-plus"></i> Sign Up</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          
+          <div class="nav-dropdown">
+            <button class="contact-btn">
+              Contact Us <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-headset"></i> Customer Support</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-location-dot"></i> Store Locations</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-handshake"></i> Business Inquiries</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-message"></i> Contact Form</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- User Profile Modal -->
+    <div class="profile-modal" id="profileModal">
+      <div class="profile-content">
+        <span class="close-modal"><i class="fas fa-times"></i></span>
+        <h2><i class="fas fa-user-circle"></i> My Profile</h2>
+        <div class="profile-header">
+          <div class="profile-image">
+            <i class="fas fa-user-circle fa-3x"></i>
+          </div>
+          <button class="create-store-btn"><i class="fas fa-store"></i> Create a Store</button>
+          <button class="edit-profile"><i class="fas fa-edit"></i> Edit</button>
+        </div>
+        <div class="profile-info">
+          <div class="info-row">
+            <div class="info-group">
+              <label><i class="fas fa-user"></i> FIRST NAME</label>
+              <input
+                type="text"
+                id="profileFirstName"
+                readonly
+                placeholder="Registered first name will appear here"
+              />
+            </div>
+            <div class="info-group">
+              <label><i class="fas fa-user"></i> LAST NAME</label>
+              <input
+                type="text"
+                id="profileLastName"
+                readonly
+                placeholder="Registered last name will appear here"
+              />
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-group">
+              <label><i class="fas fa-globe"></i> TIME ZONE</label>
+              <select disabled>
+                <option>GMT+1 (Nigerian Time)</option>
+              </select>
+            </div>
+            <div class="info-group">
+              <label><i class="fas fa-phone"></i> PHONE</label>
+              <input
+                type="tel"
+                id="profilePhone"
+                readonly
+                placeholder="Registered phone number will appear here"
+              />
+            </div>
+          </div>
+          <div class="info-group full-width">
+            <label><i class="fas fa-envelope"></i> EMAIL ADDRESS</label>
+            <input
+              type="email"
+              id="profileEmail"
+              readonly
+              placeholder="Registered email address will appear here"
+            />
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+          <button class="save-btn"><i class="fas fa-check"></i> Save</button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="slider-container">
+          <div class="slide fade">
+            <img src="images/serious1.jpg" alt="Workshop" />
+          </div>
+          <div class="slide fade">
+            <img src="images/seriuu.jpg" alt="Digital Skills" />
+          </div>
+          <div class="slide fade">
+            <img src="images/me7.jpg" alt="Tailoring Skills" />
+          </div>
+          <div class="slide fade">
+            <img src="images/aa1.jpg" alt="Photography" />
+          </div>
+          <div class="slide fade">
+            <img src="images/aa4.jpg" alt="Business Skills" />
+          </div>
+          <div class="slide fade">
+            <img src="images/aa7.jpg" alt="Web Development" />
+          </div>
+          <div class="slide fade">
+            <img src="images/hero.jpg" alt="Fashion Design" />
+          </div>
+          <div class="slide fade">
+            <img src="images/business.jpg" alt="Students" />
+          </div>
+          <div class="slide fade">
+            <img src="images/me1.jpg" alt="Office Skills" />
+          </div>
+          <div class="slide fade">
+            <img src="images/web.jpg" alt="Workshop Training" />
+          </div>
+          
+          <!-- Navigation buttons -->
+          <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+          <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+          
+          <!-- Dots/bullets/indicators -->
+          <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+          </div>
+        </div>
+        
+        <div class="hero-content">
+          <h1>FPNO<br />Skill Acquisition Hub<br /><span>Excellence Through Skills</span></h1>
+          <p>
+            Unlock your potential at Federal Polytechnic Nekede's premier Skill Acquisition Hub.
+            Expert-led training in digital technology, entrepreneurship, vocational skills,
+            and professional development. Your journey to success starts here.
+          </p>
+          <button class="shop-now">Start Learning Today</button>
+        </div>       
+      </section>
+
+      
+
+      <section class="popular-products">
+        <h2>Featured Courses</h2>
+        <div class="product-grid">
+          <div class="product-card" data-course-id="web-dev">
+            <img
+              src="images/web.jpg"
+              alt="Web Development Course"
+              width="300"
+              height="200"
+              loading="lazy"
+            />
+            <button class="favorite"><i class="fas fa-bookmark"></i></button>
+            <div class="product-info">
+              <div class="course-badge"><i class="fas fa-code"></i> Programming</div>
+              <h3>Modern Web Development</h3>
+              <div class="course-details">
+                <span class="duration"><i class="fas fa-clock"></i> 12 Weeks</span>
+                <span class="level"><i class="fas fa-signal"></i> Beginner</span>
+              </div>
+              <div class="product-rating">
+                <span class="stars">4.8 ⭐⭐⭐⭐⭐</span>
+                <span class="reviews">324 Students</span>
+              </div>
+              <p class="price">₦45,000 <span class="installment">or 3 installments</span></p>
+              <button class="buy-now">Enroll Now</button>
+            </div>
+          </div>
+          <div class="product-card" data-course-id="digital-marketing">
+            <img
+              src="images/digital.jpg"
+              alt="Digital Marketing Course"
+              width="300"
+              height="200"
+              loading="lazy"
+            />
+            <button class="favorite"><i class="fas fa-bookmark"></i></button>
+            <div class="product-info">
+              <div class="course-badge"><i class="fas fa-bullhorn"></i> Marketing</div>
+              <h3>Digital Marketing Mastery</h3>
+              <div class="course-details">
+                <span class="duration"><i class="fas fa-clock"></i> 8 Weeks</span>
+                <span class="level"><i class="fas fa-signal"></i> Intermediate</span>
+              </div>
+              <div class="product-rating">
+                <span class="stars">4.6 ⭐⭐⭐⭐</span>
+                <span class="reviews">256 Students</span>
+              </div>
+              <p class="price">₦35,000 <span class="installment">or 3 installments</span></p>
+              <button class="buy-now">Enroll Now</button>
+            </div>
+          </div>
+          <div class="product-card" data-course-id="fashion">
+            <img
+              src="images/me7.jpg"
+              alt="Fashion Design Course"
+              width="300"
+              height="200"
+              loading="lazy"
+            />
+            <button class="favorite"><i class="fas fa-bookmark"></i></button>
+            <div class="product-info">
+              <div class="course-badge"><i class="fas fa-cut"></i> Fashion</div>
+              <h3>Fashion Design & Tailoring</h3>
+              <div class="course-details">
+                <span class="duration"><i class="fas fa-clock"></i> 16 Weeks</span>
+                <span class="level"><i class="fas fa-signal"></i> All Levels</span>
+              </div>
+              <div class="product-rating">
+                <span class="stars">4.7 ⭐⭐⭐⭐</span>
+                <span class="reviews">198 Students</span>
+              </div>
+              <p class="price">₦55,000 <span class="installment">or 3 installments</span></p>
+              <button class="buy-now">Enroll Now</button>
+            </div>
+          </div>
+          <div class="product-card" data-course-id="photography">
+            <img
+              src="images/aa1.jpg"
+              alt="Photography Course"
+              width="300"
+              height="200"
+              loading="lazy"
+            />
+            <button class="favorite"><i class="fas fa-bookmark"></i></button>
+            <div class="product-info">
+              <div class="course-badge"><i class="fas fa-camera"></i> Photography</div>
+              <h3>Professional Photography</h3>
+              <div class="course-details">
+                <span class="duration"><i class="fas fa-clock"></i> 10 Weeks</span>
+                <span class="level"><i class="fas fa-signal"></i> Beginner</span>
+              </div>
+              <div class="product-rating">
+                <span class="stars">4.5 ⭐⭐⭐⭐</span>
+                <span class="reviews">167 Students</span>
+              </div>
+              <p class="price">₦40,000 <span class="installment">or 3 installments</span></p>
+              <button class="buy-now">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="collections-2">
+        <h2>SUCCESS STORIES & UPCOMING PROGRAMS</h2>
+        <div class="collection-grid">
+          <div class="collection-item success-story">
+            <img src="images/students.jpg" alt="Student Success Stories" />
+            <div class="overlay-content">
+              <div class="badge"><i class="fas fa-trophy"></i> Student Achievements</div>
+              <h3>SUCCESS STORIES</h3>
+              <p>Meet our graduates who have launched successful careers and businesses after completing our programs.</p>
+              <a href="#" class="view-more">Read Success Stories <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="collection-item upcoming-courses">
+            <img src="images/workshop3.jpeg" alt="Upcoming Training Programs" />
+            <div class="overlay-content">
+              <div class="badge"><i class="fas fa-calendar-alt"></i> Starting Soon</div>
+              <h3>UPCOMING COURSES</h3>
+              <p>Explore our new course offerings and special training programs starting next month.</p>
+              <a href="#" class="view-more">View Schedule <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="collection-item industry-partners">
+            <img src="images/office1.jpg" alt="Industry Partnerships" />
+            <div class="overlay-content">
+              <div class="badge"><i class="fas fa-handshake"></i> Partnerships</div>
+              <h3>INDUSTRY PARTNERS</h3>
+              <p>Discover our network of industry partners offering internships and job placements to our students.</p>
+              <a href="#" class="view-more">Meet Our Partners <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About FPNO Skills Hub</h3>
+          <ul>
+            <li><a href="about.html"><i class="fas fa-history"></i> Our Story</a></li>
+            <li><a href="about.html#team"><i class="fas fa-users"></i> Our Team</a></li>
+            <li><a href="about.html#careers"><i class="fas fa-briefcase"></i> Careers</a></li>
+            <li><a href="about.html#press"><i class="fas fa-newspaper"></i> Press</a></li>
+            <li><a href="#"><i class="fas fa-building"></i> Industry Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Student Resources</h3>
+          <ul>
+            <li><a href="shop.html"><i class="fas fa-book"></i> E-Library</a></li>
+            <li><a href="shop.html"><i class="fas fa-file-alt"></i> Course Materials</a></li>
+            <li><a href="shop.html"><i class="fas fa-video"></i> Video Tutorials</a></li>
+            <li><a href="shop.html"><i class="fas fa-blog"></i> Skills Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-trophy"></i> Success Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Training Programs</h3>
+          <ul>
+            <li><a href="product.html"><i class="fas fa-certificate"></i> Certificate Programs</a></li>
+            <li><a href="product.html#bestsellers"><i class="fas fa-graduation-cap"></i> Diploma Programs</a></li>
+            <li><a href="product.html#sale"><i class="fas fa-clock"></i> Short Courses</a></li>
+            <li><a href="product.html#collections"><i class="fas fa-tools"></i> Vocational Training</a></li>
+            <li><a href="product.html#sale"><i class="fas fa-lightbulb"></i> Entrepreneurship</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="newsletter">
+            <h4>Get Updates on New Courses</h4>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <img src="images/visa.jpg" alt="Visa" />
+          <img src="images/mastercard.jpg" alt="Mastercard" />
+          <img src="images/verve.jpg" alt="Verve" />
+        </div>
+        <div class="footer-info">
+          <p>&copy; 2025 FPNO Skill Acquisition Hub. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+            <a href="#"><i class="fas fa-gavel"></i> Terms of Service</a>
+            <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

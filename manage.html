@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings | Finpay</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/manage.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="breadcrumbs">
+                    Pages / Dashboard
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for features, services, settings and more...">
+                </div>
+                <div class="header-icons">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="profile-icon">
+                        <img src="./images/nop.jpg" alt="Profile">
+                        <span>Michael Nelson</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-container">
+                <h2>Account settings</h2>
+                
+                <div class="settings-content">
+                    <!-- Settings Sidebar -->
+                    <div class="settings-sidebar">
+                        <ul>
+                            <li class="active">
+                                <i class="fas fa-user"></i>
+                                <span>Profile Settings</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-lock"></i>
+                                <span>Password</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-bell"></i>
+                                <span>Notifications</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Verification</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Settings Form -->
+                    <div class="settings-form">
+                        <div class="profile-section">
+                            <div class="profile-image">
+                                <img src="./images/nop.jpg" alt="Profile">
+                                <div class="camera-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                            <div class="profile-buttons">
+                                <button class="btn-upload">Upload New</button>
+                                <button class="btn-delete">Delete avatar</button>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" placeholder="Last name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="example@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Mobile Number *</label>
+                                <div class="phone-input">
+                                    <div class="country-code">
+                                        <img src="./images/nig.jpg" alt="Nigeria Flag" class="flag">
+                                        <span>+234</span>
+                                    </div>
+                                    <input type="text" placeholder="812 345 6789">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="gender-options">
+                                    <label class="radio-container">
+                                        <input type="radio" name="gender" value="male">
+                                        <span class="radio-label">Male</span>
+                                    </label>
+                                    <label class="radio-container">
+                                        <input type="radio" name="gender" value="female">
+                                        <span class="radio-label">Female</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        <div class="form-actions">
+                            <button class="btn-save">Edit profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/manage.js"></script>
+</body>
+</html>
