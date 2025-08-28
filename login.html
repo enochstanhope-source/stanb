@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-    <title>User Login</title>
-    <link rel="stylesheet" href="styles/login.css">
-</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="styles/signup.css">
 </head>
 <body>
-    <div>
-    <a class="back-home" href="index.html">Back to home</a>
-    </div>
-    <div class="login-container">
-        <div class="icon">
-            <!-- Camera SVG Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-                <circle cx="24" cy="24" r="10" fill="none" stroke="#00b4ff" stroke-width="2"/>
-                <rect x="10" y="16" width="28" height="20" rx="4" fill="none" stroke="#00b4ff" stroke-width="2"/>
-                <rect x="18" y="10" width="12" height="6" rx="2" fill="none" stroke="#00b4ff" stroke-width="2"/>
-                <circle cx="24" cy="26" r="4" fill="#00b4ff"/>
-            </svg>
-        </div>
-    <form autocomplete="off">
-            <div class="input-group">
-                <span class="input-icon">
-                    <!-- User Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="#00b4ff" d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
-                </span>
-                <input type="text" placeholder="Username" required autocomplete="new-username">
-            </div>
-            <div class="input-group">
-                <span class="input-icon">
-                    <!-- Lock Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="#00b4ff" d="M17 8V7a5 5 0 0 0-10 0v1H5v14h14V8h-2zm-8-1a3 3 0 0 1 6 0v1h-6V7zm8 15H7V10h10v12zm-5-5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-                </span>
-                <input type="password" placeholder="Password" required autocomplete="new-password">
-            </div>
-            
-            <div class="options">
-                <label><input type="checkbox"> Remember me</label>
-                <a class="forgot-p" href="#">Forgot Password?</a>
-            </div>
-            <button class="login-btn" type="submit">LOGIN</button>
-            <p class="don't-have">Don't have an account? <a href="signup.html">Sign Up</a></p>
-        </form>
-    </div>
+	<a href="index.html" class="back-home-btn">&larr; Back to Home</a>
+	<div class="logo" style="position: absolute; left: 50%; top: 40px; transform: translateX(-50%); z-index: 10;">
+		<a href="index.html">
+			<img src="images/polybay.png" alt="G-ONE Logo" width="160" height="50" />
+		</a>
+	</div>
+	<div class="signup-container">
+		<button type="button" class="cancel-x-btn" aria-label="Cancel">&times;</button>
+		<form class="signup-form">
+			<h2>Welcome, Back</h2>
+			<div class="form-fields">
+			
+				<div class="input-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required placeholder="Enter email address" autocomplete="new-email">
+				</div>
+				<div class="input-group">
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required placeholder="Enter password" autocomplete="new-password">
+				</div>
+				
+				<button type="submit" class="join-btn" style="width: 190px; margin-top: 45px; display: block; margin-left: auto; margin-right: auto;">Login</button>
+			</div>
+			<div class="login-link">
+				Don't have an account? <a href="signup.html">Sign Up</a>
+			</div>
+</body>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var cancelBtn = document.querySelector('.cancel-x-btn');
+		if (cancelBtn) {
+			cancelBtn.addEventListener('click', function() {
+				window.location.href = 'index.html';
+			});
+		}
+	});
+</script>
+
+		</form>
+	</div>
 </body>
 </html>
