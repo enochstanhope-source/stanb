@@ -78,15 +78,11 @@
       }
     </script>
   </head>  <body>
-    <!-- Page Loader -->
-     <pre>
-    <div class="loader-wrapper">
-      <div class="loader-container">
-        <div class="loader"></div>
-        <div class="loader-text">̲FPNO Skill Acquisition Hub...</div>
-      </div>
-    </div>
-    </pre>
+      <!-- Loader Start -->
+                  <div id="loader-overlay">
+                    <div class="loader-spinner"></div>
+                  </div>
+                  <!-- Loader End -->
     
     <header>
       <nav>
@@ -225,72 +221,6 @@
       </nav>
     </header>
 
-    <!-- User Profile Modal -->
-    <div class="profile-modal" id="profileModal">
-      <div class="profile-content">
-        <span class="close-modal"><i class="fas fa-times"></i></span>
-        <h2><i class="fas fa-user-circle"></i> My Profile</h2>
-        <div class="profile-header">
-          <div class="profile-image">
-            <i class="fas fa-user-circle fa-3x"></i>
-          </div>
-          <button class="create-store-btn"><i class="fas fa-store"></i> Create a Store</button>
-          <button class="edit-profile"><i class="fas fa-edit"></i> Edit</button>
-        </div>
-        <div class="profile-info">
-          <div class="info-row">
-            <div class="info-group">
-              <label><i class="fas fa-user"></i> FIRST NAME</label>
-              <input
-                type="text"
-                id="profileFirstName"
-                readonly
-                placeholder="Registered first name will appear here"
-              />
-            </div>
-            <div class="info-group">
-              <label><i class="fas fa-user"></i> LAST NAME</label>
-              <input
-                type="text"
-                id="profileLastName"
-                readonly
-                placeholder="Registered last name will appear here"
-              />
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-group">
-              <label><i class="fas fa-globe"></i> TIME ZONE</label>
-              <select disabled>
-                <option>GMT+1 (Nigerian Time)</option>
-              </select>
-            </div>
-            <div class="info-group">
-              <label><i class="fas fa-phone"></i> PHONE</label>
-              <input
-                type="tel"
-                id="profilePhone"
-                readonly
-                placeholder="Registered phone number will appear here"
-              />
-            </div>
-          </div>
-          <div class="info-group full-width">
-            <label><i class="fas fa-envelope"></i> EMAIL ADDRESS</label>
-            <input
-              type="email"
-              id="profileEmail"
-              readonly
-              placeholder="Registered email address will appear here"
-            />
-          </div>
-        </div>
-        <div class="modal-actions">
-          <button class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
-          <button class="save-btn"><i class="fas fa-check"></i> Save</button>
-        </div>
-      </div>
-    </div>
 
     <main>
       <section class="hero">
