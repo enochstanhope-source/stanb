@@ -1,3 +1,42 @@
+// --- Slider Autoplay for Mobile ---
+function initMobileSliderAutoplay() {
+	if (window.innerWidth > 768) return;
+	const slides = document.querySelectorAll('.slider-container .slide');
+	if (!slides.length) return;
+	let current = 0;
+	slides.forEach((slide, i) => {
+		slide.style.transition = 'transform 0.7s cubic-bezier(0.77,0,0.175,1)';
+		slide.style.position = 'absolute';
+		slide.style.left = 0;
+		slide.style.top = 0;
+		slide.style.width = '100%';
+		slide.style.height = '100%';
+		slide.style.transform = i === 0 ? 'translateX(0)' : 'translateX(100%)';
+		slide.style.opacity = i === 0 ? '1' : '0';
+		slide.style.zIndex = i === 0 ? '2' : '1';
+	});
+	setInterval(() => {
+		const prev = current;
+		current = (current + 1) % slides.length;
+		slides[prev].style.transform = 'translateX(-100%)';
+		slides[prev].style.opacity = '0';
+		slides[prev].style.zIndex = '1';
+		slides[current].style.transform = 'translateX(0)';
+		slides[current].style.opacity = '1';
+		slides[current].style.zIndex = '2';
+		// Reset previous slide to right after animation
+		setTimeout(() => {
+			if (prev !== current) {
+				slides[prev].style.transition = 'none';
+				slides[prev].style.transform = 'translateX(100%)';
+				setTimeout(() => {
+					slides[prev].style.transition = 'transform 0.7s cubic-bezier(0.77,0,0.175,1)';
+				}, 10);
+			}
+		}, 700);
+	}, 1000);
+}
+
 // Loader logic
 window.addEventListener('DOMContentLoaded', function() {
 	setTimeout(function() {
@@ -250,5 +289,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	} else {
 		removeDesktopNavActions();
 	}
+		initMobileSliderAutoplay();
 });
 window.addEventListener('resize', handleHamburgerDisplay);
