@@ -300,8 +300,18 @@ nav {
     box-shadow: none;
   }
 
+    /* Reduce margin-left for Contact Us button in mobile view */
+    .contact-btn {
+      margin-left: -0.7rem !important;
+    }
+
   @keyframes navSlideIn {
     from {
+
+      /* Add margin-left to account-dropdown in mobile view */
+      .mobile-nav-account .account-dropdown {
+        margin-left: 200.9rem !important;
+      }
       right: -100vw;
     }
     to {
@@ -336,6 +346,48 @@ nav {
     display: none;
     list-style: none;
     z-index: 1000;
+}
+
+/* Mobile dropdowns appear to the right of parent */
+@media (max-width: 768px) {
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    right: auto;
+    margin-left: 0.5rem;
+    min-width: 180px;
+    background: var(--blur-bg);
+    border-radius: var(--border-radius);
+    display: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1200;
+  }
+  .nav-dropdown:hover > .dropdown-menu,
+  .nav-dropdown:focus-within > .dropdown-menu,
+  .nav-dropdown > a:focus + .dropdown-menu,
+  .nav-dropdown > a:active + .dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown .dropdown-menu li {
+    padding: 0.5rem;
+  }
+  .nav-dropdown .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.98rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover {
+    background: rgba(255,255,255,0.08);
+  }
 }
 
 .dropdown-menu li {
