@@ -307,11 +307,6 @@ nav {
 
   @keyframes navSlideIn {
     from {
-
-      /* Add margin-left to account-dropdown in mobile view */
-      .mobile-nav-account .account-dropdown {
-        margin-left: 200.9rem !important;
-      }
       right: -100vw;
     }
     to {
