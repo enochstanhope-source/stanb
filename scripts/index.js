@@ -78,15 +78,23 @@ function initMobileSliderAutoplay() {
 
 // Loader logic
 window.addEventListener('DOMContentLoaded', function() {
-	setTimeout(function() {
+	// Only show loader on index.html
+	if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+		setTimeout(function() {
+			var loader = document.getElementById('loader-overlay');
+			if (loader) {
+				loader.style.opacity = '0';
+				setTimeout(function() {
+					loader.style.display = 'none';
+				}, 300);
+			}
+		}, 3000);
+	} else {
 		var loader = document.getElementById('loader-overlay');
 		if (loader) {
-			loader.style.opacity = '0';
-			setTimeout(function() {
-				loader.style.display = 'none';
-			}, 300);
+			loader.style.display = 'none';
 		}
-	}, 3000);
+	}
 });
 
 // Hamburger menu logic
@@ -135,14 +143,36 @@ function createHamburger() {
 						const aboutLi = document.createElement('li');
 						aboutLi.className = 'nav-dropdown';
 						aboutLi.innerHTML = `
-							<a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="about.html"><i class="fas fa-history"></i> Our Story</a></li>
-								<li><a href="about.html#team"><i class="fas fa-users"></i> Our Team</a></li>
-								<li><a href="about.html#careers"><i class="fas fa-briefcase"></i> Careers</a></li>
-								<li><a href="about.html#press"><i class="fas fa-newspaper"></i> Press</a></li>
-							</ul>
+								<a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+										<li><a href="ourstory.html"><i class="fas fa-history"></i> Our Story</a></li>
+										<li><a href="ourteam.html"><i class="fas fa-users"></i> Our Team</a></li>
+										
+										<li><a href="press.html"><i class="fas fa-newspaper"></i> Press</a></li>
+								</ul>
 						`;
+
+						// Add dropdown open animation and 0.1s delay before navigation for About Us dropdown links
+						setTimeout(() => {
+							const aboutDropdown = aboutLi.querySelector('.dropdown-menu');
+							const aboutLinks = aboutDropdown ? aboutDropdown.querySelectorAll('a') : [];
+							aboutLinks.forEach(link => {
+								link.addEventListener('click', function(e) {
+											e.preventDefault();
+											// Animate dropdown open (if not already open)
+											aboutDropdown.classList.add('dropdown-animate');
+											// Animate zoom-out before navigation
+											const mainContent = document.querySelector('.story-main, .team-main, .careers-main, .press-main');
+											if (mainContent) {
+												mainContent.classList.remove('animate-in');
+												mainContent.style.transition = 'opacity 0.2s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.4,0,0.2,1)';
+												mainContent.style.opacity = '0';
+												mainContent.style.transform = 'scale(0.95)';
+											}
+											window.location.href = this.href;
+								});
+							});
+						}, 0);
 
 						// Courses
 						const coursesLi = document.createElement('li');
