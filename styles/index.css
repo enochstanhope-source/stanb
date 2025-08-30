@@ -16,6 +16,7 @@
     box-sizing: border-box !important;
     border-radius: 10px !important;
     font-size: 0.92rem !important;
+    box-shadow: 0 14px 15px rgba(255, 255, 255, 0.904) !important;
   }
   .product-card * {
     font-size: 0.92rem !important;
@@ -30,7 +31,7 @@
   }
   .product-card img {
     width: 100% !important;
-    height: 150px !important;
+    height: 280px !important;
     object-fit: cover !important;
   }
   .product-info h3 {
@@ -43,7 +44,7 @@
   }
   .buy-now {
     font-size: 0.95rem !important;
-    padding: 0.4rem 0.8rem !important;
+    padding: 24px 16px !important;
   }
 }
 @media (max-width: 768px) {
@@ -59,11 +60,11 @@
   }
   .slider-container {
     min-height: 680px !important;
-    height: 680px !important;
+    height: 50px !important;
   }
   .slide img {
-    height: 320px !important;
-    max-height: 320px !important;
+    height: 820px !important;
+    max-height: 570px !important;
     object-fit: cover !important;
   }
 }
@@ -752,62 +753,38 @@ nav {
     opacity: 0.6;
 }
 
+
 .slider-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
+.slider-track {
+  display: flex;
+  width: 200vw;
   height: 100%;
-  transition: transform 0.8s ease-in-out;
-  left: 0;
+  animation: slideTrack 20s linear infinite;
+}
+
+.slide {
+  flex: 0 0 10vw;
+  width: 100vw;
+  height: 100%;
+  position: relative;
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   filter: brightness(0.7);
 }
 
-.slide.next {
-  transform: translateX(100%);
-}
-
-.slide.current {
-  transform: translateX(0);
-}
-
-.slide.previous {
-  transform: translateX(-100%);
-}
-
-/* Keep the fade animation for smoother transitions */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+@keyframes slideTrack {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100vw); }
 }
 
 .slider-btn {
@@ -1759,7 +1736,7 @@ nav {
 /* Success Stories and Upcoming Programs Section */
 .collections-2 {
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #060000, #6d2222);
+  background: linear-gradient(to bottom, #060000, #040617);
 }
 
 .collections-2 h2 {
@@ -1906,7 +1883,7 @@ nav {
 
 /* Footer Styles */
 .footer {
-    background: rgba(43, 1, 25, 0.95);
+    background:linear-gradient(to top, #450303, #000000) rgba(43, 1, 25, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 4rem 5% 2rem;
